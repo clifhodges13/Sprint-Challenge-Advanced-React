@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background: papayawhip;
+  color: black;
+}
+
+.dark-mode {
+  text-align: center;
+  background: #444;
+  color: white;
 }
 
 .App-logo {

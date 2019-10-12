@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import '../App.css'
 
 export default class Players extends Component {
   constructor() {
@@ -22,10 +23,10 @@ export default class Players extends Component {
 
   render() {
     return (
-      <div>
+      <div className="players">
         {this.state.players.map((plyr, index) => {
            return (
-             <div key={index}>
+             <div key={index} className="player-card">
                 <h3>Player Name: {plyr.name}</h3>
                 <p>Country: {plyr.country}</p>
                 <p>Number of Searches: {plyr.searches}</p>

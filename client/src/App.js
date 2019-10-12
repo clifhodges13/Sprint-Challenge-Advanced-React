@@ -2,6 +2,7 @@ import React from 'react';
 import Players from './components/Players';
 import { useDarkMode } from './hooks/useDarkMode';
 import './App.css';
+import DarkModeButton from './components/DarkModeButton';
 
 function App() {
 
@@ -13,8 +14,8 @@ function App() {
   }
 
   return (
-    <div className={darkMode ? "App" : "dark-mode"}>
-      <button onClick={e => toggleDarkMode(e)}>Toggle Dark Mode</button>
+    <div data-testid="app-test-id" className={darkMode ? "App light-mode" : "App dark-mode"}>
+      <DarkModeButton toggleDarkMode={toggleDarkMode} />
       <Players />
     </div>
   );

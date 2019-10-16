@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import Players from './components/Players';
+import { useDarkMode } from './hooks/useDarkMode';
 import './App.css';
+import DarkModeButton from './components/DarkModeButton';
 
 function App() {
+
+  const [darkMode, setDarkMode] = useDarkMode(false);
+
+  const toggleDarkMode = e => {
+    e.preventDefault()
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div data-testid="app-test-id" className={darkMode ? "App light-mode" : "App dark-mode"}>
+      <DarkModeButton toggleDarkMode={toggleDarkMode} />
+      <Players />
     </div>
   );
 }

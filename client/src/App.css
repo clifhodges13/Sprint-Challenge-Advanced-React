@@ -1,5 +1,62 @@
 .App {
   text-align: center;
+  padding: 7%;
+  transition: all .3s ease-in-out;
+}
+
+.light-mode {
+  background: papayawhip;
+  color: black;
+}
+
+.dark-mode {
+  background: #444;
+  color: white;
+}
+
+.players {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-card {
+  width: 225px;
+  height: 300px;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 3px solid seagreen;
+  margin: 30px auto;
+  transition: all .2s ease-in;
+}
+.player-card:hover {
+  transform: scale(1.03);
+  border-radius: 10px;
+  background: wheat;
+  color: black;
+}
+
+.dm-button {
+  margin-bottom: 20px;
+}
+.dm-button button {
+  font-size: 12px;
+  border: none;
+  border-radius: 10px;
+  padding: 1% 2%;
+  transition: all .2s ease;
+}
+.dm-button button:hover {
+  transform: scale(1.03);
+  border-radius: 5px;
+  background: #555;
+  color: white;
+  cursor: pointer;
 }
 
 .App-logo {
